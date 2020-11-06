@@ -40,6 +40,26 @@
                 <Property Name="Currency" Type="Edm.String" MaxLength="5" />
                 <NavigationProperty FromRole="SalesOrder" Name="BusinessPartner" Relationship="SalesModel.FK_SalesOrder_BusinessPartner" ToRole="BusinessPartner"/>
             </EntityType>
+            <EntityType Name="BusinessPartner">
+                <Key>
+                    <PropertyRef Name="BusinessPartnerKey"/>
+                </Key>
+                <Property Name="Address" Nullable="false" Type="Edm.String"/>
+                <Property MaxLength="10" Name="BusinessPartnerID" Type="Edm.String"/>
+                <Property MaxLength="80" Name="Company" Type="Edm.String"/>
+                <Property MaxLength="60" Name="BusinessPartnerRoleText" Type="Edm.String"/>
+                <Property MaxLength="32" Name="BusinessPartnerKey" Nullable="false" Type="Edm.String"/>
+                <Property MaxLength="60" Name="CurrencyText" Type="Edm.String"/>
+                <Property MaxLength="60" Name="WebAddress" Type="Edm.String"/>
+                <Property MaxLength="3" Name="BusinessPartnerRoleCode" Type="Edm.String"/>
+                <Property MaxLength="30" Name="FaxNumber" Type="Edm.String"/>
+                <Property MaxLength="10" Name="LegalForm" Type="Edm.String"/>
+                <Property MaxLength="255" Name="EmailAddress" Type="Edm.String"/>
+                <Property MaxLength="30" Name="TelephoneNumber" Type="Edm.String"/>
+                <Property MaxLength="5" Name="CurrencyCode" Type="Edm.String"/>
+                <Property MaxLength="3" Name="CountryCode" Type="Edm.String"/>
+                <Property MaxLength="1" Name="GenderCode" Type="Edm.String"/>
+            </EntityType>
             <EntityContainer Name="SalesEntities" m:IsDefaultEntityContainer="true"
                 xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
                 <EntitySet EntityType="SalesModel.SalesOrder" Name="SalesOrders"/>
