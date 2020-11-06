@@ -7,7 +7,10 @@
             xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
             xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
             xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+            <EntityType Name="SalesOrder">
 
+
+            </EntityType>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
