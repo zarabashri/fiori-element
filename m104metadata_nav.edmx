@@ -38,6 +38,7 @@
                 <Property Name="BillingStatus" Type="Edm.String" MaxLength="1" />
                 <Property Name="BillingStatusDescription" Type="Edm.String" MaxLength="60" />
                 <Property Name="Currency" Type="Edm.String" MaxLength="5" />
+                <NavigationProperty FromRole="SalesOrder" Name="BusinessPartner" Relationship="SalesModel.FK_SalesOrder_BusinessPartner" ToRole="BusinessPartner"/>
             </EntityType>
             <EntityContainer Name="SalesEntities" m:IsDefaultEntityContainer="true"
                 xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
