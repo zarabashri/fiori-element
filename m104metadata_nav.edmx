@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices m:DataServiceVersion="2.0"
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+        <Schema Namespace="SalesModel"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+            <EntityType Name="SalesOrder">
+                <Key>
+                    <PropertyRef Name="SalesOrderKey"/>
+                </Key>
+                <Property Name="SalesOrderID" Type="Edm.String" MaxLength="10" />
+                <Property Name="CreatedByEmployeeLastName" Type="Edm.String" MaxLength="40" />
+                <Property Name="Status" Type="Edm.String" MaxLength="1" />
+                <Property Name="ChangedByEmployeeLastName" Type="Edm.String" MaxLength="40" />
+                <Property Name="ChangedByEmployeeUserID" Type="Edm.String" MaxLength="12" />
+                <Property Name="NetSum" Type="Edm.Decimal" Precision="15" Scale="2" />
+                <Property Name="CustomerKey" Type="Edm.String" MaxLength="32" />
+                <Property Name="CreatedByEmployeeUserID" Type="Edm.String" MaxLength="12" />
+                <Property Name="DeliveryStatus" Type="Edm.String" MaxLength="1" />
+                <Property Name="CurrencyCodeDescription" Type="Edm.String" MaxLength="255" />
+                <Property Name="StatusDescription" Type="Edm.String" MaxLength="60" />
+                <Property Name="ChangedByCustomerName" Type="Edm.String" MaxLength="80" />
+                <Property Name="CreatedByEmployeeFirstName" Type="Edm.String" MaxLength="40" />
+                <Property Name="DeliveryStatusDescription" Type="Edm.String" MaxLength="60" />
+                <Property Name="Note" Type="Edm.String" MaxLength="255" />
+                <Property Name="CreatedAt" Type="Edm.DateTime" Precision="7" />
+                <Property Name="Tax" Type="Edm.Decimal" Precision="15" Scale="2" />
+                <Property Name="TotalSum" Type="Edm.Decimal" Precision="15" Scale="2" />
+                <Property Name="CreatedByCustomerName" Type="Edm.String" MaxLength="80" />
+                <Property Name="ChangedByEmployeeFirstName" Type="Edm.String" MaxLength="40" />
+                <Property Name="ChangedAt" Type="Edm.DateTime" Precision="7" />
+                <Property Name="CustomerID" Type="Edm.String" MaxLength="10" />
+                <Property Name="CustomerName" Type="Edm.String" MaxLength="80" />
+                <Property Name="SalesOrderKey" Type="Edm.String" Nullable="false" MaxLength="32" />
+                <Property Name="BillingStatus" Type="Edm.String" MaxLength="1" />
+                <Property Name="BillingStatusDescription" Type="Edm.String" MaxLength="60" />
+                <Property Name="Currency" Type="Edm.String" MaxLength="5" />
+            </EntityType>
+            <EntityContainer Name="SalesEntities" m:IsDefaultEntityContainer="true"
+                xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+                <EntitySet EntityType="SalesModel.SalesOrder" Name="SalesOrders"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
