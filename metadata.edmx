@@ -36,6 +36,17 @@
                 <Property Name="Discontinued" Type="Edm.Boolean" />
                 <NavigationProperty FromRole="Product" Name="Order" Relationship="SalesModel.FK_Product_Order" ToRole="Order"/>
             </EntityType>
+            <EntityType Name="Order">
+                <Key>
+                    <PropertyRef Name="OrderKey"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Int32" />
+                <Property Name="ProductID" Type="Edm.Int32" />
+                <Property Name="CustomerName" Type="Edm.String" MaxLength="40" />
+                <Property Name="OrderDate" Type="Edm.DateTime" />
+                <Property Name="ShippedDate" Type="Edm.DateTime" />
+                <Property Name="ShipVia" Type="Edm.String" MaxLength="15" />
+            </EntityType>
             <Association Name="FK_Supplier_Product">
                 <End Multiplicity="1..1" Role="Supplier" Type="SalesModel.Supplier"/>
                 <End Multiplicity="*" Role="Product" Type="SalesModel.Product"/>
