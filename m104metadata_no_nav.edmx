@@ -3,6 +3,11 @@
     xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
     <edmx:DataServices m:DataServiceVersion="2.0"
         xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+        <Schema Namespace="SalesModel"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
 
+        </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
