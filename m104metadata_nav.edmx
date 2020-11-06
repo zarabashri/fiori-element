@@ -75,6 +75,11 @@
             <EntityContainer Name="SalesEntities" m:IsDefaultEntityContainer="true"
                 xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
                 <EntitySet EntityType="SalesModel.SalesOrder" Name="SalesOrders"/>
+                <EntitySet EntityType="SalesModel.BusinessPartner" Name="BusinessPartners"/>
+                <AssociationSet Association="SalesModel.FK_SalesOrder_BusinessPartner" Name="SO_TO_BP_AssocSet">
+                    <End EntitySet="BusinessPartners" Role="BusinessPartner"/>
+                    <End EntitySet="SalesOrders" Role="SalesOrder"/>
+                </AssociationSet>
             </EntityContainer>
         </Schema>
     </edmx:DataServices>
