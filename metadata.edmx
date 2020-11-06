@@ -22,6 +22,19 @@
                 <Property Name="Website" Type="Edm.String" MaxLength="Max" />
                 <NavigationProperty FromRole="Supplier" Name="Product" Relationship="SalesModel.FK_Supplier_Product" ToRole="Product"/>
             </EntityType>
+            <EntityType Name="Product">
+                <Key>
+                    <PropertyRef Name="ProductKey"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Int32" />
+                <Property Name="Name" Type="Edm.String" MaxLength="40" />
+                <Property Name="SupplierID" Type="Edm.Int32" />
+                <Property Name="QuantityPerUnit" Type="Edm.String" MaxLength="20" />
+                <Property Name="UnitPrice" Type="Edm.Decimal" Precision="19" Scale="2" />
+                <Property Name="UnitsInStock" Type="Edm.Int16" />
+                <Property Name="UnitsOnOrder" Type="Edm.Int16" />
+                <Property Name="Discontinued" Type="Edm.Boolean" />
+            </EntityType>
             <EntityContainer Name="SuppliersEntities" m:IsDefaultEntityContainer="true"
                 xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
                 <EntitySet EntityType="SalesModel.Supplier" Name="Suppliers"/>
