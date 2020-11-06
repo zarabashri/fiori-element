@@ -60,6 +60,18 @@
                 <Property MaxLength="3" Name="CountryCode" Type="Edm.String"/>
                 <Property MaxLength="1" Name="GenderCode" Type="Edm.String"/>
             </EntityType>
+            <Association Name="FK_SalesOrder_BusinessPartner">
+                <End Multiplicity="0..1" Role="BusinessPartner" Type="SalesModel.BusinessPartner"/>
+                <End Multiplicity="*" Role="SalesOrder" Type="SalesModel.SalesOrder"/>
+                <ReferentialConstraint>
+                    <Principal Role="BusinessPartner">
+                        <PropertyRef Name="BusinessPartnerKey"/>
+                    </Principal>
+                    <Dependent Role="SalesOrder">
+                        <PropertyRef Name="SalesOrderID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
             <EntityContainer Name="SalesEntities" m:IsDefaultEntityContainer="true"
                 xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
                 <EntitySet EntityType="SalesModel.SalesOrder" Name="SalesOrders"/>
