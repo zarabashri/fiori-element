@@ -39,6 +39,10 @@
                 <Property Name="BillingStatusDescription" Type="Edm.String" MaxLength="60" />
                 <Property Name="Currency" Type="Edm.String" MaxLength="5" />
             </EntityType>
+            <EntityContainer Name="SalesEntities" m:IsDefaultEntityContainer="true"
+                xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+                <EntitySet EntityType="SalesModel.SalesOrder" Name="SalesOrders"/>
+            </EntityContainer>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
