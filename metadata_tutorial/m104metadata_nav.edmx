@@ -68,7 +68,7 @@
                         <PropertyRef Name="BusinessPartnerKey"/>
                     </Principal>
                     <Dependent Role="SalesOrder">
-                        <PropertyRef Name="SalesOrderID"/>
+                        <PropertyRef Name="CustomerKey"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>

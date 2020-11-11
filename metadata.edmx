@@ -9,7 +9,7 @@
             xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
             <EntityType Name="Supplier">
                 <Key>
-                    <PropertyRef Name="SupplierKey"/>
+                    <PropertyRef Name="Id"/>
                 </Key>
                 <Property Name="Id" Type="Edm.Int32" />
                 <Property Name="Name" Type="Edm.String" MaxLength="40" />
@@ -20,11 +20,11 @@
                 <Property Name="Country" Type="Edm.String" MaxLength="15" />
                 <Property Name="Phone" Type="Edm.String" MaxLength="24" />
                 <Property Name="Website" Type="Edm.String" MaxLength="Max" />
-                <NavigationProperty FromRole="Supplier" Name="Product" Relationship="SalesModel.FK_Supplier_Product" ToRole="Product"/>
+                <NavigationProperty FromRole="Supplier" Name="ToProducts" Relationship="SalesModel.FK_Supplier_Product" ToRole="Product"/>
             </EntityType>
             <EntityType Name="Product">
                 <Key>
-                    <PropertyRef Name="ProductKey"/>
+                    <PropertyRef Name="Id"/>
                 </Key>
                 <Property Name="Id" Type="Edm.Int32" />
                 <Property Name="Name" Type="Edm.String" MaxLength="40" />
@@ -34,11 +34,11 @@
                 <Property Name="UnitsInStock" Type="Edm.Int16" />
                 <Property Name="UnitsOnOrder" Type="Edm.Int16" />
                 <Property Name="Discontinued" Type="Edm.Boolean" />
-                <NavigationProperty FromRole="Product" Name="Order" Relationship="SalesModel.FK_Product_Order" ToRole="Order"/>
+                <NavigationProperty FromRole="Product" Name="ToOrders" Relationship="SalesModel.FK_Product_Order" ToRole="Order"/>
             </EntityType>
             <EntityType Name="Order">
                 <Key>
-                    <PropertyRef Name="OrderKey"/>
+                    <PropertyRef Name="Id"/>
                 </Key>
                 <Property Name="Id" Type="Edm.Int32" />
                 <Property Name="ProductID" Type="Edm.Int32" />
@@ -60,7 +60,7 @@
                 </ReferentialConstraint>
             </Association>
             <Association Name="FK_Product_Order">
-                <End Multiplicity="*" Role="Product" Type="SalesModel.Product"/>
+                <End Multiplicity="0..1" Role="Product" Type="SalesModel.Product"/>
                 <End Multiplicity="*" Role="Order" Type="SalesModel.Order"/>
                 <ReferentialConstraint>
                     <Principal Role="Product">
