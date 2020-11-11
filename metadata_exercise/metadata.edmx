@@ -28,7 +28,7 @@
                 </Key>
                 <Property Name="Id" Type="Edm.Int32" />
                 <Property Name="Name" Type="Edm.String" MaxLength="40" />
-                <Property Name="SupplierID" Type="Edm.Int32" />
+                <Property Name="SupplierId" Type="Edm.Int32" />
                 <Property Name="QuantityPerUnit" Type="Edm.String" MaxLength="20" />
                 <Property Name="UnitPrice" Type="Edm.Decimal" Precision="19" Scale="2" />
                 <Property Name="UnitsInStock" Type="Edm.Int16" />
@@ -41,7 +41,7 @@
                     <PropertyRef Name="Id"/>
                 </Key>
                 <Property Name="Id" Type="Edm.Int32" />
-                <Property Name="ProductID" Type="Edm.Int32" />
+                <Property Name="ProductId" Type="Edm.Int32" />
                 <Property Name="CustomerName" Type="Edm.String" MaxLength="40" />
                 <Property Name="OrderDate" Type="Edm.DateTime" />
                 <Property Name="ShippedDate" Type="Edm.DateTime" />
