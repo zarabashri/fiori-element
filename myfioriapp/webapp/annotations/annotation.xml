@@ -62,6 +62,19 @@
                     </Record>
                 </Annotation>
             </Annotations>
+            <Annotations Target="SAP.SEPMRA_C_PD_ProductSalesDataType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ID"/>
+                            <PropertyValue Property="Label" String="Sales ID"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DeliveryMonth_Text"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
