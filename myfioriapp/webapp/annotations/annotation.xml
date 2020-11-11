@@ -15,6 +15,15 @@
                         <PropertyPath>Name</PropertyPath>
                     </Collection>
                 </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TechnicalData"/>
+                            <PropertyValue Property="Label" String="Technical Data"/>
+                            <PropertyValue Property="ID" String="TechData"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
                 <Annotation Term="UI.FieldGroup" Qualifier="TechnicalData">
                     <Record>
                         <PropertyValue Property="Data">
