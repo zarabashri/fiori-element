@@ -11,7 +11,7 @@
                 <Key>
                     <PropertyRef Name="Id"/>
                 </Key>
-                <Property Name="Id" Type="Edm.Int32" />
+                <Property Name="Id" Type="Edm.Int32" Nullable="false" />
                 <Property Name="Name" Type="Edm.String" MaxLength="40" />
                 <Property Name="Category" Type="Edm.String" MaxLength="20" />
                 <Property Name="Address" Type="Edm.String" MaxLength="50" />
@@ -26,7 +26,7 @@
                 <Key>
                     <PropertyRef Name="Id"/>
                 </Key>
-                <Property Name="Id" Type="Edm.Int32" />
+                <Property Name="Id" Type="Edm.Int32" Nullable="false" />
                 <Property Name="Name" Type="Edm.String" MaxLength="40" />
                 <Property Name="SupplierId" Type="Edm.Int32" />
                 <Property Name="QuantityPerUnit" Type="Edm.String" MaxLength="20" />
@@ -40,7 +40,7 @@
                 <Key>
                     <PropertyRef Name="Id"/>
                 </Key>
-                <Property Name="Id" Type="Edm.Int32" />
+                <Property Name="Id" Type="Edm.Int32" Nullable="false" />
                 <Property Name="ProductId" Type="Edm.Int32" />
                 <Property Name="CustomerName" Type="Edm.String" MaxLength="40" />
                 <Property Name="OrderDate" Type="Edm.DateTime" />
@@ -55,7 +55,7 @@
                         <PropertyRef Name="Id"/>
                     </Principal>
                     <Dependent Role="Product">
-                        <PropertyRef Name="SupplierID"/>
+                        <PropertyRef Name="SupplierId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -67,7 +67,7 @@
                         <PropertyRef Name="Id"/>
                     </Principal>
                     <Dependent Role="Order">
-                        <PropertyRef Name="ProductID"/>
+                        <PropertyRef Name="ProductId"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
@@ -76,11 +76,11 @@
                 <EntitySet EntityType="SalesModel.Supplier" Name="Suppliers"/>
                 <EntitySet EntityType="SalesModel.Product" Name="Products"/>
                 <EntitySet EntityType="SalesModel.Order" Name="Orders"/>
-                <AssociationSet Association="SalesModel.FK_Supplier_Product" Name="SP_TO_PD_AssocSet">
+                <AssociationSet Association="SalesModel.FK_Supplier_Product" Name="Supplier_To_Product_AssocSet">
                     <End EntitySet="Products" Role="Product"/>
                     <End EntitySet="Suppliers" Role="Supplier"/>
                 </AssociationSet>
-                <AssociationSet Association="SalesModel.FK_Product_Order" Name="PD_TO_OR_AssocSet">
+                <AssociationSet Association="SalesModel.FK_Product_Order" Name="Product_To_Order_AssocSet">
                     <End EntitySet="Orders" Role="Order"/>
                     <End EntitySet="Products" Role="Product"/>
                 </AssociationSet>
