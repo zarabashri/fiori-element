@@ -15,6 +15,38 @@
                         <PropertyPath>Name</PropertyPath>
                     </Collection>
                 </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="TechnicalData">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ProductBaseUnit"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Height"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Width"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Depth"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Weight"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="DimensionUnit"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Technical Data"/>
+                    </Record>
+                </Annotation>
             </Annotations>
         </Schema>
     </edmx:DataServices>
