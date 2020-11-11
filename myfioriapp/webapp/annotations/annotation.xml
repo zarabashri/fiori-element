@@ -12,6 +12,7 @@
                     <Collection>
                         <PropertyPath>to_PriceRange/PriceClassification</PropertyPath>
                         <PropertyPath>to_ProductCategory/MainProductCategory</PropertyPath>
+                        <PropertyPath>Name</PropertyPath>
                     </Collection>
                 </Annotation>
             </Annotations>
