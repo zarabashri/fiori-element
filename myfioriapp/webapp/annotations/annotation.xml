@@ -27,6 +27,11 @@
                             <PropertyValue Property="Label" String="Monthly Revenue" />
                             <PropertyValue Property="ID" String="MonthRev" />
                         </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_ProductSalesData/@UI.LineItem"/>
+                            <PropertyValue Property="Label" String="Sales Data" />
+                            <PropertyValue Property="ID" String="SalesData" />
+                        </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.FieldGroup" Qualifier="TechnicalData">
