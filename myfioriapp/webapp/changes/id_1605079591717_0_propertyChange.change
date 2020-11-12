@@ -3,21 +3,21 @@
     "fileType": "change",
     "changeType": "propertyChange",
     "moduleName": "",
-    "reference": "Namespace1.myfioriapp",
+    "reference": "com.rizing.myfioriapp",
     "packageName": "",
     "content": {
         "property": "useExportToExcel",
         "newValue": true
     },
     "selector": {
-        "id": "Namespace1.myfioriapp::sap.suite.ui.generic.template.ListReport.view.ListReport::SEPMRA_C_PD_Product--listReport",
+        "id": "com.rizing.myfioriapp::sap.suite.ui.generic.template.ListReport.view.ListReport::SEPMRA_C_PD_Product--listReport",
         "idIsLocal": false,
         "type": "sap.ui.comp.smarttable.SmartTable"
     },
     "layer": "VENDOR",
     "texts": {},
-    "namespace": "apps/Namespace1.myfioriapp/changes/",
-    "projectId": "Namespace1.myfioriapp",
+    "namespace": "apps/com.rizing.myfioriapp/changes/",
+    "projectId": "com.rizing.myfioriapp",
     "creation": 1605079591717,
     "originalLanguage": "",
     "support": {

@@ -6,7 +6,7 @@
         <edmx:Include Namespace="SEPMRA_PROD_MAN" Alias="SAP"/>
     </edmx:Reference>
     <edmx:DataServices>
-        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="Namespace1">
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="com.rizing">
             <Annotations Target="SAP.SEPMRA_C_PD_ProductType">
                 <Annotation Term="UI.SelectionFields">
                     <Collection>

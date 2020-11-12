@@ -1,7 +1,7 @@
 sap.ui.define(['sap/ui/core/util/MockServer'], function (MockServer) {
     'use strict';
     var oMockServer,
-        _sAppModulePath = 'com.rizing.myfioriapp/',
+        _sAppModulePath = 'com.rizing.myfioriappproject/',
         _sJsonFilesModulePath = _sAppModulePath + 'localService/mockdata';
 
     return {
@@ -16,7 +16,7 @@ sap.ui.define(['sap/ui/core/util/MockServer'], function (MockServer) {
             var oUriParameters = jQuery.sap.getUriParameters(),
                 sJsonFilesUrl = jQuery.sap.getModulePath(_sJsonFilesModulePath),
                 sManifestUrl = jQuery.sap.getModulePath(_sAppModulePath + 'manifest', '.json'),
-                sEntity = 'SEPMRA_C_PD_Product',
+                sEntity = 'Suppliers',
                 sErrorParam = oUriParameters.get('errorType'),
                 iErrorCode = sErrorParam === 'badRequest' ? 400 : 500,
                 oManifest = jQuery.sap.syncGetJSON(sManifestUrl).data,

@@ -1,7 +1,7 @@
 {
     "_version": "1.8.0",
     "sap.app": {
-        "id": "com.rizing.myfioriapp",
+        "id": "com.rizing.myfioriappproject",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -15,21 +15,13 @@
         "resources": "resources.json",
         "dataSources": {
             "mainService": {
-                "uri": "/sap/opu/odata/sap/SEPMRA_PROD_MAN/",
+                "uri": "/here/goes/your/serviceurl/",
                 "type": "OData",
                 "settings": {
                     "annotations": [
-                        "SEPMRA_PROD_MAN_ANNO_MDL",
                         "annotation"
                     ],
                     "localUri": "localService/metadata.xml"
-                }
-            },
-            "SEPMRA_PROD_MAN_ANNO_MDL": {
-                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='SEPMRA_PROD_MAN_ANNO_MDL',Version='0001')/$value/",
-                "type": "ODataAnnotation",
-                "settings": {
-                    "localUri": "localService/SEPMRA_PROD_MAN_ANNO_MDL.xml"
                 }
             },
             "annotation": {
@@ -85,13 +77,17 @@
                 "type": "sap.ui.model.resource.ResourceModel",
                 "uri": "i18n/i18n.properties"
             },
-            "i18n|sap.suite.ui.generic.template.ListReport|SEPMRA_C_PD_Product": {
+            "i18n|sap.suite.ui.generic.template.ListReport|Suppliers": {
                 "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "i18n/ListReport/SEPMRA_C_PD_Product/i18n.properties"
+                "uri": "i18n/ListReport/Suppliers/i18n.properties"
             },
-            "i18n|sap.suite.ui.generic.template.ObjectPage|SEPMRA_C_PD_Product": {
+            "i18n|sap.suite.ui.generic.template.ObjectPage|Suppliers": {
                 "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "i18n/ObjectPage/SEPMRA_C_PD_Product/i18n.properties"
+                "uri": "i18n/ObjectPage/Suppliers/i18n.properties"
+            },
+            "i18n|sap.suite.ui.generic.template.ObjectPage|Products": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/ObjectPage/Products/i18n.properties"
             },
             "": {
                 "dataSource": "mainService",
@@ -122,8 +118,8 @@
             "showDraftToggle": false
         },
         "pages": {
-            "ListReport|SEPMRA_C_PD_Product": {
-                "entitySet": "SEPMRA_C_PD_Product",
+            "ListReport|Suppliers": {
+                "entitySet": "Suppliers",
                 "component": {
                     "name": "sap.suite.ui.generic.template.ListReport",
                     "list": true,
@@ -135,31 +131,24 @@
                             "dateSettings": {
                                 "useDateRange": true
                             }
-                        },
-                        "tableSettings": {
-                            "multiSelect": true
                         }
                     }
                 },
                 "pages": {
-                    "ObjectPage|SEPMRA_C_PD_Product": {
-                        "entitySet": "SEPMRA_C_PD_Product",
+                    "ObjectPage|Suppliers": {
+                        "entitySet": "Suppliers",
                         "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
                         "component": {
-                            "name": "sap.suite.ui.generic.template.ObjectPage",
-                            "settings": {
-                                "sections": {
-                                    "to_ProductSalesData::com.sap.vocabularies.UI.v1.LineItem": {}
-                                }
-                            }
+                            "name": "sap.suite.ui.generic.template.ObjectPage"
                         },
                         "pages": {
-                            "ObjectPage|SEPMRA_C_PD_ProductSalesData": {
+                            "ObjectPage|ToProducts": {
+                                "navigationProperty": "ToProducts",
+                                "entitySet": "Products",
+                                "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
                                 "component": {
                                     "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "SEPMRA_C_PD_ProductSalesData",
-                                "navigationProperty": "to_ProductSalesData"
+                                }
                             }
                         }
                     }
