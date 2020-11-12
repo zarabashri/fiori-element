@@ -1,0 +1,122 @@
+[
+    {
+        "__metadata": {
+            "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(1)",
+            "type": "NorthwindModel.Supplier"
+        },
+        "Id": 1,
+        "Name": "Exotic Liquids",
+        "Category": "Food & Beverages",
+        "ContactName": "Charlotte Cooper",
+        "ContactTitle": "Purchasing Manager",
+        "Address": "49 Gilbert St.",
+        "City": "London",
+        "Region": null,
+        "PostalCode": "EC1 4SD",
+        "Country": "United Kingdom",
+        "Phone": "(171) 555-2222",
+        "Fax": null,
+        "Website": "https://www.google.com.my/",
+        "Products": {
+            "__deferred": {
+                "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(1)/Products"
+            }
+        }
+    },
+    {
+        "__metadata": {
+            "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(2)",
+            "type": "NorthwindModel.Supplier"
+        },
+        "Id": 2,
+        "Name": "New Orleans Cajun Delights",
+        "Category": "Manufacturing",
+        "ContactName": "Shelley Burke",
+        "ContactTitle": "Order Administrator",
+        "Address": "P.O. Box 78934",
+        "City": "New Orleans",
+        "Region": "LA",
+        "PostalCode": "70117",
+        "Country": "United States",
+        "Phone": "(100) 555-4822",
+        "Fax": null,
+        "Website": "https://www.google.com.my/",
+        "Products": {
+            "__deferred": {
+                "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(2)/Products"
+            }
+        }
+    },
+    {
+        "__metadata": {
+            "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(3)",
+            "type": "NorthwindModel.Supplier"
+        },
+        "Id": 3,
+        "Name": "Grandma Kelly's Homestead",
+        "Category": "Food & Beverages",
+        "ContactName": "Regina Murphy",
+        "ContactTitle": "Sales Representative",
+        "Address": "707 Oxford Rd.",
+        "City": "Ann Arbor",
+        "Region": "MI",
+        "PostalCode": "48104",
+        "Country": "United States",
+        "Phone": "(313) 555-5735",
+        "Fax": "(313) 555-3349",
+        "Website": "https://www.google.com.my/",
+        "Products": {
+            "__deferred": {
+                "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(3)/Products"
+            }
+        }
+    },
+    {
+        "__metadata": {
+            "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(4)",
+            "type": "NorthwindModel.Supplier"
+        },
+        "Id": 4,
+        "Name": "Tokyo Traders",
+        "Category": "Food & Beverages",
+        "ContactName": "Yoshi Nagase",
+        "ContactTitle": "Marketing Manager",
+        "Address": "9-8 Sekimai MUnited Statesshino-shi",
+        "City": "Tokyo",
+        "Region": null,
+        "PostalCode": "100",
+        "Country": "Japan",
+        "Phone": "(03) 3555-5011",
+        "Fax": null,
+        "Website": "https://www.google.com.my/",
+        "Products": {
+            "__deferred": {
+                "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(4)/Products"
+            }
+        }
+    },
+    {
+        "__metadata": {
+            "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(5)",
+            "type": "NorthwindModel.Supplier"
+        },
+        "Id": 5,
+        "Name": "Cooperativa de Quesos 'Las Cabras'",
+        "Category": "Food & Beverages",
+        "ContactName": "Antonio del Valle Saavedra",
+        "ContactTitle": "Export Administrator",
+        "Address": "Calle del Rosal 4",
+        "City": "Oviedo",
+        "Region": "Asturias",
+        "PostalCode": "33007",
+        "Country": "Spain",
+        "Phone": "(98) 598 76 54",
+        "Fax": null,
+        "Website": "https://www.google.com.my/",
+        "Products": {
+            "__deferred": {
+                "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(5)/Products"
+            }
+        }
+    }
+]
