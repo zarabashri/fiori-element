@@ -59,6 +59,13 @@
                 <Property Name="ShippedDate" Type="Edm.DateTime" />
                 <Property Name="ShipVia" Type="Edm.String" MaxLength="15" />
             </EntityType>
+            <EntityType Name="VH_Country">
+                <Key>
+                    <PropertyRef Name="Code"/>
+                </Key>
+                <Property Name="Code" Type="Edm.String" MaxLength="5" />
+                <Property Name="Text" Type="Edm.String" MaxLength="20" />
+            </EntityType>
             <Association Name="FK_Supplier_Product">
                 <End Multiplicity="0..1" Role="Supplier" Type="SalesModel.Supplier"/>
                 <End Multiplicity="*" Role="Product" Type="SalesModel.Product"/>
@@ -88,6 +95,7 @@
                 <EntitySet EntityType="SalesModel.Supplier" Name="Suppliers"/>
                 <EntitySet EntityType="SalesModel.Product" Name="Products"/>
                 <EntitySet EntityType="SalesModel.Order" Name="Orders"/>
+                <EntitySet EntityType="SalesModel.VH_Country" Name="VH_Countries"/>
                 <AssociationSet Association="SalesModel.FK_Supplier_Product" Name="Supplier_To_Product_AssocSet">
                     <End EntitySet="Products" Role="Product"/>
                     <End EntitySet="Suppliers" Role="Supplier"/>
