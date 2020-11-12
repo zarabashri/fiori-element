@@ -1,90 +1,121 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <edmx:Edmx Version="1.0"
-xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
-<edmx:DataServices m:DataServiceVersion="2.0"
-xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
-<Schema Namespace="SalesModel"
-xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
-xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
-xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
-<EntityType Name="Supplier">
-    <Key>
-        <PropertyRef Name="Id"/>
-    </Key>
-    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Name" Type="Edm.String" MaxLength="40" />
-    <Property Name="Category" Type="Edm.String" MaxLength="20" />
-    <Property Name="Address" Type="Edm.String" MaxLength="50" />
-    <Property Name="City" Type="Edm.String" MaxLength="15" />
-    <Property Name="PostalCode" Type="Edm.String" MaxLength="10" />
-    <Property Name="Country" Type="Edm.String" MaxLength="15" />
-    <Property Name="Phone" Type="Edm.String" MaxLength="24" />
-    <Property Name="Website" Type="Edm.String" MaxLength="Max" />
-    <NavigationProperty FromRole="Supplier" Name="ToProducts" Relationship="SalesModel.FK_Supplier_Product" ToRole="Product"/>
-</EntityType>
-<EntityType Name="Product">
-    <Key>
-        <PropertyRef Name="Id"/>
-    </Key>
-    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Name" Type="Edm.String" MaxLength="40" />
-    <Property Name="SupplierId" Type="Edm.Int32" />
-    <Property Name="QuantityPerUnit" Type="Edm.String" MaxLength="20" />
-    <Property Name="UnitPrice" Type="Edm.Decimal" Precision="19" Scale="2" />
-    <Property Name="UnitsInStock" Type="Edm.Int16" />
-    <Property Name="UnitsOnOrder" Type="Edm.Int16" />
-    <Property Name="Discontinued" Type="Edm.Boolean" />
-    <NavigationProperty FromRole="Product" Name="ToOrders" Relationship="SalesModel.FK_Product_Order" ToRole="Order"/>
-</EntityType>
-<EntityType Name="Order">
-    <Key>
-        <PropertyRef Name="Id"/>
-    </Key>
-    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-    <Property Name="ProductId" Type="Edm.Int32" />
-    <Property Name="CustomerName" Type="Edm.String" MaxLength="40" />
-    <Property Name="OrderDate" Type="Edm.DateTime" />
-    <Property Name="ShippedDate" Type="Edm.DateTime" />
-    <Property Name="ShipVia" Type="Edm.String" MaxLength="15" />
-</EntityType>
-<Association Name="FK_Supplier_Product">
-    <End Multiplicity="0..1" Role="Supplier" Type="SalesModel.Supplier"/>
-    <End Multiplicity="*" Role="Product" Type="SalesModel.Product"/>
-    <ReferentialConstraint>
-        <Principal Role="Supplier">
-            <PropertyRef Name="Id"/>
-        </Principal>
-        <Dependent Role="Product">
-            <PropertyRef Name="SupplierId"/>
-        </Dependent>
-    </ReferentialConstraint>
-</Association>
-<Association Name="FK_Product_Order">
-    <End Multiplicity="0..1" Role="Product" Type="SalesModel.Product"/>
-    <End Multiplicity="*" Role="Order" Type="SalesModel.Order"/>
-    <ReferentialConstraint>
-        <Principal Role="Product">
-            <PropertyRef Name="Id"/>
-        </Principal>
-        <Dependent Role="Order">
-            <PropertyRef Name="ProductId"/>
-        </Dependent>
-    </ReferentialConstraint>
-</Association>
-<EntityContainer Name="SuppliersEntities" m:IsDefaultEntityContainer="true"
-xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
-<EntitySet EntityType="SalesModel.Supplier" Name="Suppliers"/>
-<EntitySet EntityType="SalesModel.Product" Name="Products"/>
-<EntitySet EntityType="SalesModel.Order" Name="Orders"/>
-<AssociationSet Association="SalesModel.FK_Supplier_Product" Name="Supplier_To_Product_AssocSet">
-    <End EntitySet="Products" Role="Product"/>
-    <End EntitySet="Suppliers" Role="Supplier"/>
-</AssociationSet>
-<AssociationSet Association="SalesModel.FK_Product_Order" Name="Product_To_Order_AssocSet">
-    <End EntitySet="Orders" Role="Order"/>
-    <End EntitySet="Products" Role="Product"/>
-</AssociationSet>
-</EntityContainer>
-</Schema>
-</edmx:DataServices>
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Reference Uri="https://sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0"
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+        <Schema Namespace="SalesModel"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+            <EntityType Name="Supplier">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Name" Type="Edm.String" MaxLength="40" />
+                <Property Name="Category" Type="Edm.String" MaxLength="20" />
+                <Property Name="Address" Type="Edm.String" MaxLength="50" />
+                <Property Name="City" Type="Edm.String" MaxLength="15" />
+                <Property Name="PostalCode" Type="Edm.String" MaxLength="10" />
+                <Property Name="Country" Type="Edm.String" MaxLength="15" />
+                <Property Name="Phone" Type="Edm.String" MaxLength="24" />
+                <Property Name="Website" Type="Edm.String" MaxLength="Max" />
+                <NavigationProperty FromRole="Supplier" Name="ToProducts" Relationship="SalesModel.FK_Supplier_Product" ToRole="Product"/>
+            </EntityType>
+            <EntityType Name="Product">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Name" Type="Edm.String" MaxLength="40" />
+                <Property Name="SupplierId" Type="Edm.Int32" />
+                <Property Name="QuantityPerUnit" Type="Edm.String" MaxLength="20" />
+                <Property Name="UnitPrice" Type="Edm.Decimal" Precision="19" Scale="2" />
+                <Property Name="UnitsInStock" Type="Edm.Int16" />
+                <Property Name="UnitsOnOrder" Type="Edm.Int16" />
+                <Property Name="Discontinued" Type="Edm.Boolean" />
+                <NavigationProperty FromRole="Product" Name="ToOrders" Relationship="SalesModel.FK_Product_Order" ToRole="Order"/>
+            </EntityType>
+            <EntityType Name="Order">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+                <Property Name="ProductId" Type="Edm.Int32" />
+                <Property Name="CustomerName" Type="Edm.String" MaxLength="40" />
+                <Property Name="OrderDate" Type="Edm.DateTime" />
+                <Property Name="ShippedDate" Type="Edm.DateTime" />
+                <Property Name="ShipVia" Type="Edm.String" MaxLength="15" />
+            </EntityType>
+            <Association Name="FK_Supplier_Product">
+                <End Multiplicity="0..1" Role="Supplier" Type="SalesModel.Supplier"/>
+                <End Multiplicity="*" Role="Product" Type="SalesModel.Product"/>
+                <ReferentialConstraint>
+                    <Principal Role="Supplier">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="Product">
+                        <PropertyRef Name="SupplierId"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="FK_Product_Order">
+                <End Multiplicity="0..1" Role="Product" Type="SalesModel.Product"/>
+                <End Multiplicity="*" Role="Order" Type="SalesModel.Order"/>
+                <ReferentialConstraint>
+                    <Principal Role="Product">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="Order">
+                        <PropertyRef Name="ProductId"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="SuppliersEntities" m:IsDefaultEntityContainer="true"
+                xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+                <EntitySet EntityType="SalesModel.Supplier" Name="Suppliers"/>
+                <EntitySet EntityType="SalesModel.Product" Name="Products"/>
+                <EntitySet EntityType="SalesModel.Order" Name="Orders"/>
+                <AssociationSet Association="SalesModel.FK_Supplier_Product" Name="Supplier_To_Product_AssocSet">
+                    <End EntitySet="Products" Role="Product"/>
+                    <End EntitySet="Suppliers" Role="Supplier"/>
+                </AssociationSet>
+                <AssociationSet Association="SalesModel.FK_Product_Order" Name="Product_To_Order_AssocSet">
+                    <End EntitySet="Orders" Role="Order"/>
+                    <End EntitySet="Products" Role="Product"/>
+                </AssociationSet>
+            </EntityContainer>
+            <Annotations Target="SalesModel.Supplier"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Name"/>
+                            <PropertyValue Property="Label" String="Name"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Category"/>
+                            <PropertyValue Property="Label" String="Category"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Country"/>
+                            <PropertyValue Property="Label" String="Country"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="City"/>
+                            <PropertyValue Property="Label" String="City"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Phone"/>
+                            <PropertyValue Property="Label" String="Phone"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
 </edmx:Edmx>
