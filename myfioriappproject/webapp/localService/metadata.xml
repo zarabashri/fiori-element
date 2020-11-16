@@ -146,6 +146,17 @@
                     <Record Type="UI.HeaderInfoType">
                         <PropertyValue Property="TypeName" String="Supplier"/>
                         <PropertyValue Property="TypeNamePlural" String="Suppliers"/>
+                        <PropertyValue Property="ImageUrl" Path="LogoPath"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Name"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Id"/>
+                            </Record>
+                        </PropertyValue>
                     </Record>
                 </Annotation>
             </Annotations>
