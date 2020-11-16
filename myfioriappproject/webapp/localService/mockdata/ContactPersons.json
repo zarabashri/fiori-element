@@ -1,0 +1,57 @@
+[
+    {
+        "Id": 101,
+        "Name": "Justin Cooper",
+        "Title": "Purchasing Manager",
+        "Email": "charlotte@gmail.com",
+        "Phone": "0171234567",
+        "__metadata": {
+            "uri": "ContactPersons(101)",
+            "type": "SalesModel.ContactPersons"
+        }
+    },
+    {
+        "Id": 102,
+        "Name": "Ryan Burke",
+        "Title": "Order Administrator",
+        "Email": "shelley@gmail.com",
+        "Phone": "0171234567",
+        "__metadata": {
+            "uri": "ContactPersons(102)",
+            "type": "SalesModel.ContactPersons"
+        }
+    },
+    {
+        "Id": 103,
+        "Name": "John Murphy",
+        "Title": "Sales Representative",
+        "Email": "regina@gmail.com",
+        "Phone": "0171234567",
+        "__metadata": {
+            "uri": "ContactPersons(103)",
+            "type": "SalesModel.ContactPersons"
+        }
+    },
+    {
+        "Id": 104,
+        "Name": "Yoshi Nagase",
+        "Title": "Marketing Manager",
+        "Email": "yoshi@gmail.com",
+        "Phone": "0171234567",
+        "__metadata": {
+            "uri": "ContactPersons(104)",
+            "type": "SalesModel.ContactPersons"
+        }
+    },
+    {
+        "Id": 105,
+        "Name": "Antonio del Valle",
+        "Title": "Export Administrator",
+        "Email": "antonio@gmail.com",
+        "Phone": "0171234567",
+        "__metadata": {
+            "uri": "ContactPersons(105)",
+            "type": "SalesModel.ContactPersons"
+        }
+    }
+]

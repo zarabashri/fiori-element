@@ -36,9 +36,11 @@
                 <Property Name="Country" Type="Edm.String" MaxLength="15" />
                 <Property Name="CountryId" Type="Edm.String" MaxLength="5" />
                 <Property Name="Phone" Type="Edm.String" MaxLength="24" />
+                <Property Name="ContactPersonId" Type="Edm.Int32" Nullable="false" />
                 <Property Name="Website" Type="Edm.String" MaxLength="Max" />
                 <Property Name="LogoPath" Type="Edm.String" MaxLength="255" />
                 <NavigationProperty FromRole="Supplier" Name="ToProducts" Relationship="SalesModel.FK_Supplier_Product" ToRole="Product"/>
+                <NavigationProperty FromRole="Supplier" Name="ToContactPerson" Relationship="SalesModel.FK_Supplier_ContactPerson" ToRole="ContactPerson"/>
             </EntityType>
             <EntityType Name="Product">
                 <Key>
@@ -73,6 +75,16 @@
                 <Property Name="Code" Type="Edm.String" MaxLength="5" />
                 <Property Name="Text" Type="Edm.String" MaxLength="20" />
             </EntityType>
+            <EntityType Name="ContactPerson">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+                <Property Name="Name" Type="Edm.String" MaxLength="30" />
+                <Property Name="Title" Type="Edm.String" MaxLength="30" />
+                <Property Name="Email" Type="Edm.String" MaxLength="30" />
+                <Property Name="Phone" Type="Edm.String" MaxLength="24" />
+            </EntityType>
             <Association Name="FK_Supplier_Product">
                 <End Multiplicity="0..1" Role="Supplier" Type="SalesModel.Supplier"/>
                 <End Multiplicity="*" Role="Product" Type="SalesModel.Product"/>
@@ -97,12 +109,25 @@
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
+            <Association Name="FK_Supplier_ContactPerson">
+                <End Multiplicity="0..1" Role="Supplier" Type="SalesModel.Supplier"/>
+                <End Multiplicity="1" Role="ContactPerson" Type="SalesModel.ContactPerson"/>
+                <ReferentialConstraint>
+                    <Principal Role="Supplier">
+                        <PropertyRef Name="ContactPersonId"/>
+                    </Principal>
+                    <Dependent Role="ContactPerson">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
             <EntityContainer Name="SuppliersEntities" m:IsDefaultEntityContainer="true"
                 xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
                 <EntitySet EntityType="SalesModel.Supplier" Name="Suppliers"/>
                 <EntitySet EntityType="SalesModel.Product" Name="Products"/>
                 <EntitySet EntityType="SalesModel.Order" Name="Orders"/>
                 <EntitySet EntityType="SalesModel.VH_Country" Name="VH_Countries"/>
+                <EntitySet EntityType="SalesModel.ContactPerson" Name="ContactPersons"/>
                 <AssociationSet Association="SalesModel.FK_Supplier_Product" Name="Supplier_To_Product_AssocSet">
                     <End EntitySet="Products" Role="Product"/>
                     <End EntitySet="Suppliers" Role="Supplier"/>
@@ -110,6 +135,10 @@
                 <AssociationSet Association="SalesModel.FK_Product_Order" Name="Product_To_Order_AssocSet">
                     <End EntitySet="Orders" Role="Order"/>
                     <End EntitySet="Products" Role="Product"/>
+                </AssociationSet>
+                <AssociationSet Association="SalesModel.FK_Supplier_ContactPerson" Name="Supplier_To_ContactPerson_AssocSet">
+                    <End EntitySet="Suppliers" Role="Supplier"/>
+                    <End EntitySet="ContactPersons" Role="ContactPerson"/>
                 </AssociationSet>
             </EntityContainer>
             <Annotations Target="SalesModel.Supplier"
