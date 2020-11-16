@@ -33,6 +33,7 @@
                 <Property Name="CountryId" Type="Edm.String" MaxLength="5" />
                 <Property Name="Phone" Type="Edm.String" MaxLength="24" />
                 <Property Name="Website" Type="Edm.String" MaxLength="Max" />
+                <Property Name="LogoPath" Type="Edm.String" MaxLength="255" />
                 <NavigationProperty FromRole="Supplier" Name="ToProducts" Relationship="SalesModel.FK_Supplier_Product" ToRole="Product"/>
             </EntityType>
             <EntityType Name="Product">

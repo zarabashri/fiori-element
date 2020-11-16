@@ -17,6 +17,7 @@
         "Country": "United Kingdom",
         "Phone": "(171) 555-2222",
         "Fax": null,
+        "LogoPath": "/images/logo/logo1.png",
         "Website": "https://www.google.com.my/",
         "Products": {
             "__deferred": {
@@ -42,6 +43,7 @@
         "Country": "United States",
         "Phone": "(100) 555-4822",
         "Fax": null,
+        "LogoPath": "/images/logo/logo2.jpg",
         "Website": "https://www.google.com.my/",
         "Products": {
             "__deferred": {
@@ -67,6 +69,7 @@
         "Country": "United States",
         "Phone": "(313) 555-5735",
         "Fax": "(313) 555-3349",
+        "LogoPath": "/images/logo/logo5.jpg",
         "Website": "https://www.google.com.my/",
         "Products": {
             "__deferred": {
@@ -92,6 +95,7 @@
         "Country": "Japan",
         "Phone": "(03) 3555-5011",
         "Fax": null,
+        "LogoPath": "/images/logo/logo4.png",
         "Website": "https://www.google.com.my/",
         "Products": {
             "__deferred": {
@@ -117,6 +121,7 @@
         "Country": "Spain",
         "Phone": "(98) 598 76 54",
         "Fax": null,
+        "LogoPath": "/images/logo/logo3.png",
         "Website": "https://www.google.com.my/",
         "Products": {
             "__deferred": {
