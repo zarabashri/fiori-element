@@ -48,6 +48,7 @@
                 <Property Name="UnitsInStock" Type="Edm.Int16" />
                 <Property Name="UnitsOnOrder" Type="Edm.Int16" />
                 <Property Name="Discontinued" Type="Edm.Boolean" />
+                <Property Name="CurrencyKey" Type="Edm.String" MaxLength="3" />
                 <NavigationProperty FromRole="Product" Name="ToOrders" Relationship="SalesModel.FK_Product_Order" ToRole="Order"/>
             </EntityType>
             <EntityType Name="Order">
