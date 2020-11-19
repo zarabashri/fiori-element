@@ -18,6 +18,7 @@
         "Phone": "(171) 555-2222",
         "ContactPersonId": 101,
         "Fax": null,
+        "TotalSales": "150000.00",
         "LogoPath": "/images/logo/logo1.png",
         "Website": "https://www.google.com.my/",
         "Products": {
@@ -45,6 +46,7 @@
         "Phone": "(100) 555-4822",
         "ContactPersonId": 102,
         "Fax": null,
+        "TotalSales": "380000.00",
         "LogoPath": "/images/logo/logo2.jpg",
         "Website": "https://www.google.com.my/",
         "Products": {
@@ -72,6 +74,7 @@
         "Phone": "(313) 555-5735",
         "ContactPersonId": 103,
         "Fax": "(313) 555-3349",
+        "TotalSales": "540000.00",
         "LogoPath": "/images/logo/logo5.jpg",
         "Website": "https://www.google.com.my/",
         "Products": {
@@ -99,6 +102,7 @@
         "Phone": "(03) 3555-5011",
         "ContactPersonId": 104,
         "Fax": null,
+        "TotalSales": "750000.00",
         "LogoPath": "/images/logo/logo4.png",
         "Website": "https://www.google.com.my/",
         "Products": {
@@ -126,6 +130,7 @@
         "Phone": "(98) 598 76 54",
         "ContactPersonId": 105,
         "Fax": null,
+        "TotalSales": "980000.00",
         "LogoPath": "/images/logo/logo3.png",
         "Website": "https://www.google.com.my/",
         "Products": {

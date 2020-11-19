@@ -47,6 +47,7 @@
                 <Property Name="ContactPersonId" Type="Edm.Int32" Nullable="false" />
                 <Property Name="Website" Type="Edm.String" MaxLength="Max" />
                 <Property Name="LogoPath" Type="Edm.String" MaxLength="255" />
+                <Property Name="TotalSales" Type="Edm.Decimal" Precision="19" Scale="2" />
                 <NavigationProperty FromRole="Supplier" Name="ToProducts" Relationship="SalesModel.FK_Supplier_Product" ToRole="Product"/>
                 <NavigationProperty FromRole="Supplier" Name="ToContactPerson" Relationship="SalesModel.FK_Supplier_ContactPerson" ToRole="ContactPerson"/>
             </EntityType>
