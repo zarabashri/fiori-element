@@ -1,0 +1,4 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Button icon="sap-icon://sales-document" tooltip="{i18n>salesOverviewLabel}" press="onPressSalesOverview"/>
+</core:FragmentDefinition>

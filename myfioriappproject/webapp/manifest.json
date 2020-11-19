@@ -110,6 +110,16 @@
                             "className": "sap.ui.core.Fragment",
                             "fragmentName": "com.rizing.myfioriappproject.ext.fragment.CustomFilterExtension",
                             "type": "XML"
+                        },
+                        "ResponsiveTableColumnsExtension|Suppliers": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "com.rizing.myfioriappproject.ext.fragment.ListReportResponsiveTableColumns",
+                            "type": "XML"
+                        },
+                        "ResponsiveTableCellsExtension|Suppliers": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "com.rizing.myfioriappproject.ext.fragment.ListReportResponsiveTableCells",
+                            "type": "XML"
                         }
                     }
                 },
