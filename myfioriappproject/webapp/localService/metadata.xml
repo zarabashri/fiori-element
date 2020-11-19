@@ -292,7 +292,7 @@
                 </Annotation>
                 <Annotation Term="Capabilities.UpdateRestrictions">
                     <Record Type="Capabilities.UpdateRestrictionsType">
-                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="Updatable" Bool="true"/>
                     </Record>
                 </Annotation>
             </Annotations>

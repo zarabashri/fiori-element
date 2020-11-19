@@ -115,7 +115,20 @@
                 },
                 "sap.ui.controllerExtensions": {
                     "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                        "controllerName": "com.rizing.myfioriappproject.ext.controller.ListReportExtension"
+                        "controllerName": "com.rizing.myfioriappproject.ext.controller.ListReportExtension",
+                        "sap.ui.generic.app": {
+                            "Suppliers": {
+                                "EntitySet": "Suppliers",
+                                "Actions": {
+                                    "ChangePrice": {
+                                        "id": "idChangeTotalSales",
+                                        "text": "{{changeTotalSalesLabel}}",
+                                        "press": "onPressChangeTotalSales",
+                                        "requiresSelection": true
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
