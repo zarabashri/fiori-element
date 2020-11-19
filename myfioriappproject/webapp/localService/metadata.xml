@@ -183,6 +183,9 @@
                             <PropertyValue Property="Value" Path="Phone"/>
                             <PropertyValue Property="Label" String="Phone"/>
                         </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalSales"/>
+                        </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.SelectionFields">
@@ -270,6 +273,10 @@
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.Label" String="Website" />
                 <Annotation Term="Core.IsURL" Bool="true" />
+            </Annotations>
+            <Annotations Target="SalesModel.Supplier/TotalSales"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Total Sales" />
             </Annotations>
             <Annotations Target="SalesModel.SuppliersEntities/Suppliers"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">

@@ -103,7 +103,22 @@
             }
         },
         "extends": {
-            "extensions": {}
+            "extensions": {
+                "sap.ui.viewExtensions": {
+                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+                        "SmartFilterBarControlConfigurationExtension|Suppliers": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "com.rizing.myfioriappproject.ext.fragment.CustomFilterExtension",
+                            "type": "XML"
+                        }
+                    }
+                },
+                "sap.ui.controllerExtensions": {
+                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+                        "controllerName": "com.rizing.myfioriappproject.ext.controller.ListReportExtension"
+                    }
+                }
+            }
         },
         "contentDensities": {
             "compact": true,
